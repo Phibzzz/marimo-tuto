@@ -1,0 +1,21 @@
+[project]
+name = "marimo-video-games"
+version = "0.1.0"
+description = "Tutoriel : application de datavisualisation interactive avec Marimo, Polars et Plotly (dataset Kaggle Video Game Sales)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "marimo>=0.25",
+    "polars>=1.44",
+    # Plotly Express a besoin de numpy : l'extra [express] l'installe (pas de pandas).
+    "plotly[express]>=7.1",
+]
+
+[dependency-groups]
+dev = ["pytest>=9"]
+
+[tool.pytest.ini_options]
+# La racine du projet est ajoutée au sys.path : `import src.data` et
+# `import notebooks.videogame_sales` fonctionnent dans les tests.
+pythonpath = ["."]
+testpaths = ["tests"]

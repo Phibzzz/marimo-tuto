@@ -1,0 +1,7 @@
+# Versions vérifiées le 27/09/2026 avec Python 3.11.5 (Windows 11).
+marimo==0.25.0
+polars==1.44.2
+# Plotly Express a besoin de numpy : l'extra [express] l'installe (pandas n'est pas requis).
+plotly[express]==7.1.0
+# Tests du pipeline (optionnel pour suivre le tutoriel)
+pytest==9.1.1
